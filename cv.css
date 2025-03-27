@@ -1,0 +1,117 @@
+.cv-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 3rem;
+  }
+  
+  .cv-left {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .cv-right {
+    flex: 2 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .timeline-entry {
+    border-left: 3px solid var(--primary-neon);
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  
+  .timeline-entry::before {
+    content: "🪙";
+    position: absolute;
+    left: -1.2rem;
+    top: 0.2rem;
+    font-size: 1rem;
+    text-shadow: 0 0 6px var(--neon-hover);
+  }
+  
+  .timeline-entry h3 {
+    font-size: 1.2rem;
+    color: var(--primary-neon);
+    text-shadow: 0 0 6px var(--neon-hover);
+    margin-bottom: 0.3rem;
+  }
+  
+  .timeline-time {
+    color: #66ccff;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .timeline-details {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--neon-hover);
+  }
+  
+  /* zimo-card 保留已有样式即可 */
+  
+  @media (max-width: 900px) {
+    .cv-layout {
+      flex-direction: column;
+    }
+  
+    .cv-left, .cv-right {
+      flex: 1 1 100%;
+    }
+  }
+
+
+  .download-btn-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .neon-download {
+    font-family: 'VT323', monospace;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border: 2px solid var(--primary-neon);
+    background-color: transparent;
+    color: var(--primary-neon);
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 0 8px var(--primary-neon);
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .neon-download:hover {
+    background-color: var(--primary-neon);
+    color: #000;
+    box-shadow: 0 0 14px var(--neon-hover), 0 0 24px var(--neon-hover);
+  }
+  
+  .zimo-cv-btn {
+    font-family: 'VT323', monospace;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--primary-neon);
+    border: 2px solid var(--primary-neon);
+    padding: 12px 20px;
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: 12px;
+    background-color: transparent;
+    text-decoration: none;
+    box-shadow: 0 0 12px var(--neon-hover);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .zimo-cv-btn:hover {
+    background-color: var(--primary-neon);
+    color: black;
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 0 20px var(--primary-neon), 0 0 30px var(--neon-hover);
+  }
+  

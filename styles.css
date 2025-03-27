@@ -1,0 +1,391 @@
+:root {
+  --primary-neon: #ff00aa;
+  --neon-hover: #ff66cc;
+}
+
+.quarto-title-block {
+  display: none !important;
+}
+
+.home-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ff00cc;
+  transition: transform 0.2s ease-in-out;
+}
+
+.home-float:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+
+body {
+  background-color: #000;
+  color: var(--primary-neon);
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: none;
+  image-rendering: pixelated;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'VT323', monospace;
+  color: var(--primary-neon);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5em;
+}
+
+.section-header {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: var(--primary-neon);
+  text-shadow: 0 0 10px var(--primary-neon);
+  text-align: center;
+}
+
+/* 头像基础样式 */
+.avatar {
+  width: 200px; /* 根据需要可调大或小，比如180px / 150px */
+  height: 200px;
+  border-radius: 50%; /* 圆形裁剪 */
+  object-fit: cover; /* 保证图片不变形 */
+  border: 3px solid var(--primary-neon);
+  box-shadow: 0 0 16px var(--primary-neon);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 悬停时发光更强 */
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 24px var(--neon-hover);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-container img.avatar {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-container h1 {
+  font-size: 2.2rem;
+  margin: 0.5rem 0;
+}
+
+.typewriter-output {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-neon);
+  font-size: 1.5rem;
+  text-shadow: 0 0 6px var(--neon-hover);
+}
+
+.hero-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+  justify-items: center;
+}
+
+@media (max-width: 800px) {
+  .hero-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
+.button-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  padding: 10px 5px;
+  transition: all 0.3s ease;
+}
+
+.button-block:hover {
+  box-shadow: 0 0 10px var(--primary-neon), 0 0 20px var(--neon-hover);
+  transform: scale(1.03);
+}
+
+.btn {
+  font-family: 'VT323', monospace;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border: 2px solid var(--primary-neon);
+  background-color: transparent;
+  color: var(--primary-neon);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 0 6px var(--primary-neon);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--primary-neon);
+  color: #000;
+  box-shadow: 0 0 10px var(--neon-hover), 0 0 20px var(--neon-hover);
+}
+
+.btn-desc {
+  font-size: 0.7rem;
+  color: var(--neon-hover);
+  font-family: 'VT323', monospace;
+  margin-top: 8px;
+  text-align: center;
+  opacity: 0.75;
+  line-height: 1.2;
+  max-width: 160px;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.zimo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 3rem;
+}
+
+.zimo-card {
+  border: 1px solid var(--primary-neon);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px var(--primary-neon);
+  background-color: #000;
+  font-family: 'VT323', monospace;
+  color: var(--primary-neon);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zimo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px var(--primary-neon);
+}
+
+.zimo-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  text-shadow: 0 0 6px var(--neon-hover);
+}
+
+@media screen and (min-width: 992px) {
+  .zimo-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--neon-hover);
+}
+
+.zimo-signature {
+  text-align: center;
+  margin: 1rem 0; 
+  font-size: 1rem;
+  color: var(--primary-neon);
+}
+
+.navbar {
+  background-color: #000 !important;
+  border-bottom: 2px solid var(--primary-neon);
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+  color: var(--primary-neon) !important;
+  font-family: 'VT323', monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--neon-hover) !important;
+  text-shadow: 0 0 6px var(--neon-hover);
+}
+
+
+.navbar-nav .nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 12px;
+  color: var(--primary-neon);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: var(--neon-hover);
+  opacity: 0;
+  box-shadow: 0 0 8px var(--neon-hover);
+  transition: opacity 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  opacity: 1;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--neon-hover);
+}
+
+
+/* === 流星背景容器 === */
+#cyber-meteor-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* 不影响点击交互 */
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* === 单个流星 === */
+.meteor {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(255, 0, 255, 0.8), transparent);
+  animation: meteor-fall linear infinite;
+  opacity: 0.6;
+  transform: rotate(45deg);
+}
+
+/* === 流星动画关键帧 === */
+@keyframes meteor-fall {
+  0% {
+    transform: translateX(100vw) translateY(-20vh) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-10vw) translateY(120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* === 星星闪烁 === */
+.star-twinkle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: var(--neon-hover);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--neon-hover);
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* === 鼠标涟漪效果 === */
+.ripple {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--neon-hover) 0%, transparent 70%);
+  pointer-events: none;
+  animation: ripple-animation 1s ease-out forwards;
+  z-index: 2;
+}
+
+@keyframes ripple-animation {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+
+#twinkle-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.twinkle-star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle-fade 2s ease-in-out forwards;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
+@keyframes twinkle-fade {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
