@@ -1,0 +1,84 @@
+---
+title: "ZIMO.SYSTEM/PING_ZIMO"
+format:
+  html:
+    toc: false
+    page-layout: full
+    html-unsafe: true
+    css: styles.css
+---
+
+```{=html}
+<div class="section-header">💌 INITIATE CONTACT CHANNEL</div>
+
+
+<div class="zimo-contact-grid">
+  <div class="zimo-contact-card">
+    <h3>📡 SIGNAL FREQUENCY</h3>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:zengzimo23@gmail.com">zengzimo23@gmail.com</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/zimozeng12" target="_blank">zimozeng12</a></li>
+    </ul>
+  </div>
+
+  <div class="zimo-contact-card">
+    <h3>🦾 TRANSMIT A MESSAGE</h3>
+    <p>Send a signal to ZIMO.SYSTEM. Await reply protocol 🛸</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Message to ZIMO.SYSTEM" required></textarea>
+      <button type="submit">🚀 TRANSMIT</button>
+    </form>
+    <p class="terminal-hint">⇨ All messages are routed through the neon uplink 🛰</p>
+  </div>
+</div>
+
+
+<p class="zimo-signature">👾 ZIMO.SYSTEM uplink module · cyber-handshake initialized</p>
+<p class="zimo-signature">@ POWERED BY ZIMO.SYSTEM</p>
+```
+```{=html}
+<!-- ✨ Cosmic Background Effects -->
+<div id="cyber-meteor-layer">
+  <div class="meteor" style="left: 10%; animation-duration: 5s; animation-delay: 0s;"></div>
+  <div class="meteor" style="left: 30%; animation-duration: 7s; animation-delay: 2s;"></div>
+  <div class="meteor" style="left: 50%; animation-duration: 6s; animation-delay: 4s;"></div>
+  <div class="meteor" style="left: 70%; animation-duration: 5s; animation-delay: 1s;"></div>
+  <div class="meteor" style="left: 90%; animation-duration: 8s; animation-delay: 3s;"></div>
+</div>
+<div id="star-field"></div>
+<div id="ripple-cursor"></div>
+```
+````{=html}
+<div id="twinkle-layer"></div>
+
+<script>
+  const twinkleLayer = document.getElementById('twinkle-layer');
+
+  function spawnTwinkleStars() {
+    const star = document.createElement('div');
+    star.className = 'twinkle-star';
+
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.animationDuration = `${1 + Math.random() * 2}s`;
+    twinkleLayer.appendChild(star);
+
+    setTimeout(() => star.remove(), 3000);
+  }
+
+  function spawnMultipleStars(count = 3) {
+    for (let i = 0; i < count; i++) {
+      spawnTwinkleStars();
+    }
+  }
+
+  setInterval(() => {
+    if (Math.random() < 0.9) spawnMultipleStars(2 + Math.floor(Math.random() * 3));
+  }, 400);
+</script>
+
+<a href="index.qmd" title="Back to Home">
+  <img src="home.png" alt="Back to Home" class="home-float">
+</a>

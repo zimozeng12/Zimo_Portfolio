@@ -1,0 +1,129 @@
+---
+title: "ZIMO.SYSTEM "
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    embed-resources: true
+    html-unsafe: true
+    navbar: false
+---
+
+<div class="top-left-tag">▶ HELLO, WORLD.</div>
+
+```{=html}
+<div class="hero-container">
+  <img src="avatar.png" alt="Zimo Avatar" class="avatar neon-glow" />
+  <h1>Zimo System Online</h1>
+  <h2 id="typewriter-text" class="typewriter-output"></h2>
+
+  <div class="hero-buttons">
+    <div class="button-block">
+      <a href="about.qmd" class="btn">🧬 ABOUT MODULE</a>
+      <p class="btn-desc">Zimo’s background<br>and system bio</p>
+    </div>
+    <div class="button-block">
+      <a href="projects.qmd" class="btn">🚀 SHOW TIME</a>
+      <p class="btn-desc">Data projects<br>and quests</p>
+    </div>
+    <div class="button-block">
+      <a href="cv.qmd" class="btn">📃 RESUME FILE</a>
+      <p class="btn-desc">Academic & work<br>experience log</p>
+    </div>
+    <div class="button-block">
+      <a href="contact.qmd" class="btn">📩 PING ZIMO</a>
+      <p class="btn-desc">Shoot a signal<br>and get in touch</p>
+    </div>
+  </div>
+</div>
+```
+
+<script>
+  const words = [
+    "I work with data",
+    "Always learning",
+    "Lover of cats and dogs",
+    "Orange enthusiast",
+    "Globe trotter"
+  ];
+  const emojis = ["📊", "📚", "🐱🐶", "🍊", "✈️"];
+  let index = 0;
+  let charIndex = 0;
+  let displayText = "";
+
+  function typeNextChar() {
+    const fullText = words[index];
+    if (charIndex < fullText.length) {
+      displayText = fullText.substring(0, charIndex + 1);
+      document.getElementById("typewriter-text").innerHTML =
+        `<span>${displayText}</span> <span>${emojis[index]}</span> <span class="cursor">|</span>`;
+      charIndex++;
+      setTimeout(typeNextChar, 70);
+    } else {
+      setTimeout(() => {
+        charIndex = 0;
+        displayText = "";
+        index = (index + 1) % words.length;
+        typeNextChar();
+      }, 2000);
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", function () {
+    console.log("🟠 Zimo-style typewriter started");
+    typeNextChar();
+  });
+</script>
+
+<style>
+  .cursor {
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style>
+
+```{=html}
+<!-- ✨ Cosmic Background Effects -->
+<div id="cyber-meteor-layer">
+  <div class="meteor" style="left: 10%; animation-duration: 5s; animation-delay: 0s;"></div>
+  <div class="meteor" style="left: 30%; animation-duration: 7s; animation-delay: 2s;"></div>
+  <div class="meteor" style="left: 50%; animation-duration: 6s; animation-delay: 4s;"></div>
+  <div class="meteor" style="left: 70%; animation-duration: 5s; animation-delay: 1s;"></div>
+  <div class="meteor" style="left: 90%; animation-duration: 8s; animation-delay: 3s;"></div>
+</div>
+<div id="star-field"></div>
+<div id="ripple-cursor"></div>
+```
+````{=html}
+<div id="twinkle-layer"></div>
+
+<script>
+  const twinkleLayer = document.getElementById('twinkle-layer');
+
+  function spawnTwinkleStars() {
+    const star = document.createElement('div');
+    star.className = 'twinkle-star';
+
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.animationDuration = `${1 + Math.random() * 2}s`;
+    twinkleLayer.appendChild(star);
+
+    setTimeout(() => star.remove(), 3000);
+  }
+
+  function spawnMultipleStars(count = 3) {
+    for (let i = 0; i < count; i++) {
+      spawnTwinkleStars();
+    }
+  }
+
+  setInterval(() => {
+    if (Math.random() < 0.9) spawnMultipleStars(2 + Math.floor(Math.random() * 3));
+  }, 400);
+</script>
+

@@ -1,0 +1,34 @@
+project:
+  type: website
+
+website:
+  favicon: logo.png
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Projects"
+        href: projects.qmd
+      - text: "CV"
+        href: cv.qmd
+      - text: "Contact"
+        href: contact.qmd
+
+
+
+format:
+  html:
+    theme: cosmo
+    css: 
+        - styles.css
+        - about.css
+        - project.css
+        - cv.css
+        - contact.css
+    includes:
+      in-header:
+        - font-loader.html
+        - typeit-setup.html
+    html-unsafe: true

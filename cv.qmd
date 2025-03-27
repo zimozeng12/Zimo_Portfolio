@@ -1,0 +1,130 @@
+---
+title: "ZIMO.SYSTEM/RESUME_FILE"
+format:
+  html:
+    toc: false
+    page-layout: full
+    html-unsafe: true
+    css: styles.css
+---
+<div class="terminal-path">
+  <span class="folder-icon">📁</span> <span class="path-text">ZIMO.SYSTEM</span><span class="slash">/</span><span class="highlight">RESUME_FILE</span>
+</div>
+
+```{=html}
+<div class="timeline">
+<div class="download-btn-container">
+  <a href="ZimoZeng_CV.pdf" download class="zimo-cv-btn">🛸 DOWNLOAD CV SIGNAL</a>
+</div>
+
+  <div class="timeline-entry">
+    <h3>🎓 Boston University</h3>
+    <p class="timeline-time">2024.09 – 2025.06 · Boston, USA</p>
+    <ul>
+      <li><strong>Major:</strong> Applied Business Analytics (Graduate)</li>
+      <li><strong>Core Courses:</strong> Quantitative Analysis, Decision Analysis, Market Analysis, Risk Analysis, Operations Management</li>
+      <li><strong>Skills:</strong> R, Excel, Python (Data Analysis); Power BI (Visualization)</li>
+    </ul>
+  </div>
+
+  <div class="timeline-entry">
+    <h3>🎓 University of Edinburgh</h3>
+    <p class="timeline-time">2020.09 – 2024.06 · Edinburgh, UK</p>
+    <ul>
+      <li><strong>Major:</strong> Economics & Statistics (Undergraduate)</li>
+      <li><strong>Core Courses:</strong> Economics, Econometrics, Statistics, Calculus, Financial Math</li>
+      <li><strong>Research:</strong> Thesis on China’s Real Estate Bubble; Group project on COVID-19 Impact</li>
+      <li><strong>Skills:</strong> Stata, R, Python, LaTeX</li>
+    </ul>
+  </div>
+
+  <div class="timeline-entry">
+    <h3>💼 Changjiang Securities</h3>
+    <p class="timeline-time">2023.05 – 2023.07 · Wuhan, China</p>
+    <ul>
+      <li><strong>Position:</strong> Quantitative Research Intern</li>
+      <li><strong>Skills:</strong> Factor model analysis, report writing, time management</li>
+      <li><strong>Contribution:</strong> Participated in return model R&D and improved team efficiency</li>
+    </ul>
+  </div>
+
+  <div class="timeline-entry">
+    <h3>📊 Marketing Analyst · Negotiation Competition</h3>
+    <p class="timeline-time">2021.09 · Edinburgh, UK</p>
+    <ul>
+      <li><strong>Teamwork:</strong> Collaborated with a 4-person team</li>
+      <li><strong>Analysis:</strong> Competitor pricing and data filtering</li>
+      <li><strong>Execution:</strong> Schedule planning and data presentation</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="zimo-grid">
+  <div class="zimo-card">
+    <h3>🛠 Skills & Languages</h3>
+    <ul>
+      <li><strong>Technical:</strong> R, Stata, Python, Excel, LaTeX, SQL</li>
+      <li><strong>Languages:</strong> English (Proficient), Cantonese (Basic)</li>
+    </ul>
+  </div>
+
+  <div class="zimo-card">
+    <h3>📚 Certification</h3>
+    <ul>
+      <li>CFA Level 1 Candidate (Quantitative Methods Focus)</li>
+    </ul>
+  </div>
+</div>
+```
+
+```{=html}
+<p class="zimo-signature">@ POWERED BY ZIMO.SYSTEM</p>
+```
+
+```{=html}
+<!-- ✨ Cosmic Background Effects -->
+<div id="cyber-meteor-layer">
+  <div class="meteor" style="left: 10%; animation-duration: 5s; animation-delay: 0s;"></div>
+  <div class="meteor" style="left: 30%; animation-duration: 7s; animation-delay: 2s;"></div>
+  <div class="meteor" style="left: 50%; animation-duration: 6s; animation-delay: 4s;"></div>
+  <div class="meteor" style="left: 70%; animation-duration: 5s; animation-delay: 1s;"></div>
+  <div class="meteor" style="left: 90%; animation-duration: 8s; animation-delay: 3s;"></div>
+</div>
+<div id="star-field"></div>
+<div id="ripple-cursor"></div>
+```
+````{=html}
+<div id="twinkle-layer"></div>
+
+<script>
+  const twinkleLayer = document.getElementById('twinkle-layer');
+
+  function spawnTwinkleStars() {
+    const star = document.createElement('div');
+    star.className = 'twinkle-star';
+
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.animationDuration = `${1 + Math.random() * 2}s`;
+    twinkleLayer.appendChild(star);
+
+    setTimeout(() => star.remove(), 3000);
+  }
+
+  function spawnMultipleStars(count = 3) {
+    for (let i = 0; i < count; i++) {
+      spawnTwinkleStars();
+    }
+  }
+
+  setInterval(() => {
+    if (Math.random() < 0.9) spawnMultipleStars(2 + Math.floor(Math.random() * 3));
+  }, 400);
+</script>
+
+<a href="index.qmd" title="Back to Home">
+  <img src="home.png" alt="Back to Home" class="home-float">
+</a>
+
+

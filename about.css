@@ -1,0 +1,157 @@
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-left {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-neon);
+    gap: 1.2rem;
+    padding-top: 1rem;
+  }
+
+  
+  .about-left img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-neon);
+    box-shadow: 0 0 18px var(--neon-hover);
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .about-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--neon-hover);
+    max-width: 240px;
+  }
+  
+  .about-left li {
+    margin-bottom: 0.8rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  
+  .about-tags {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    color: var(--primary-neon);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: left;
+    max-width: 280px;
+  }
+  
+  .about-tags li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.5;
+  }
+  
+  .about-tags li::before {
+    content: '';
+    display: inline-block;
+    width: 1.3em; /* 空出 emoji 的位置 */
+    flex-shrink: 0;
+  }
+  
+  
+  .about-right {
+    flex: 2 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .neon-box {
+    background-color: #111;
+    border: 2px solid var(--primary-neon);
+    box-shadow: 0 0 20px var(--neon-hover);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-family: 'VT323', monospace;
+    color: var(--primary-neon);
+  }
+  
+  .neon-box h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-shadow: 0 0 6px var(--primary-neon);
+    margin-bottom: 1rem;
+  }
+  
+  .neon-box ul {
+    padding-left: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-left, .about-right {
+      width: 100%;
+    }
+  }
+  
+/* --- Avatar hover --- */
+.about-left img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .about-left img:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 0 20px var(--primary-neon), 0 0 40px var(--neon-hover);
+  }
+  
+  /* --- Left-side tags hover --- */
+  .about-tags div {
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0.4rem 0;
+    cursor: default;
+  }
+  .about-tags div:hover {
+    color: var(--neon-hover);
+    transform: translateX(6px);
+  }
+  
+  /* --- Right-side card hover (your .neon-box class) --- */
+  .neon-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .neon-box:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 0 18px var(--primary-neon), 0 0 30px var(--neon-hover);
+  }
+  
+  /* --- Inner list hover (optional) --- */
+  .neon-box li:hover {
+    color: var(--neon-hover);
+    transform: translateX(4px);
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+  

@@ -1,0 +1,82 @@
+.contact-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .zimo-contact-card {
+    flex: 1 1 400px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #111;
+    border: 2px solid var(--primary-neon);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--neon-hover);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .zimo-contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 28px var(--primary-neon);
+  }
+  
+  .zimo-contact-card ul {
+    padding-left: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .zimo-contact-card a {
+    color: var(--neon-hover);
+    text-decoration: underline;
+    word-break: break-word;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    padding: 12px;
+    border: 2px solid var(--primary-neon);
+    background-color: black;
+    color: var(--primary-neon);
+    box-shadow: 0 0 5px var(--neon-hover);
+    resize: none;
+    width: 100%;
+  }
+  
+  .contact-form button {
+    background-color: transparent;
+    color: var(--primary-neon);
+    border: 2px solid var(--primary-neon);
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 8px var(--primary-neon);
+    transition: 0.3s;
+    font-family: 'VT323', monospace;
+  }
+  
+  .contact-form button:hover {
+    background-color: var(--primary-neon);
+    color: black;
+    box-shadow: 0 0 20px var(--neon-hover);
+  }
+  

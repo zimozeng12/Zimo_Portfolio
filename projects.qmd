@@ -1,0 +1,125 @@
+---
+title: "ZIMO.SYSTEM/SHOW_TIME"
+format:
+  html:
+    page-layout: full
+    toc: false
+    html-unsafe: true
+---
+
+<div class="terminal-path">
+  <span class="folder-icon">📁</span> <span class="path-text">ZIMO.SYSTEM</span><span class="slash">/</span><span class="highlight">SHOW_TIME</span>
+</div>
+
+```{=html}
+<div class="section-header">🚀 PROJECTS</div>
+```
+
+```{=html}
+<div class="zimo-bubble-grid">
+
+  <div class="zimo-bubble bubble-a">
+    <h3>✏️ Assignment 01</h3>
+    <p class="btn-desc">📦 First encounter with EC2, Jupyter,<br> and Linux shell.<br> Cloud adventures begin!</p>
+    <a href="https://github.com/met-ad-688/assignment-01-zimozeng12" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+  <div class="zimo-bubble bubble-b">
+    <h3>✏️ Assignment 02</h3>
+    <p class="btn-desc">🧪 Spark SQL + job market analytics.<br> Query, visualize,<br> and uncover hiring trends!</p>
+    <a href="https://github.com/met-ad-688/assignment-02-zimozeng12" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+  <div class="zimo-bubble bubble-c">
+    <h3>🛠 Lab 01: Git Setup</h3>
+    <p class="btn-desc">🔐 GitHub, SSH, and commit rituals.<br> Version control initialized.</p>
+    <a href="https://github.com/zimozeng12/ad688-sp25-lab01" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+  <div class="zimo-bubble bubble-d">
+    <h3>🌐 Lab 02: Web Deployment</h3>
+    <p class="btn-desc">🌍 Built my first Quarto website<br> and launched it to the world.</p>
+    <a href="https://github.com/zimozeng12/zimozeng12.github.io" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+  <div class="zimo-bubble bubble-e">
+    <h3>☁️ Lab 03: AWS & Job Data</h3>
+    <p class="btn-desc">📊 Connected to EC2, processed job data,<br> and visualized insights.</p>
+    <a href="https://github.com/met-ad-688/lab03-zimozeng12" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+  <div class="zimo-bubble bubble-a">
+    <h3>📊 Lab 04: Data Analysis</h3>
+    <p class="btn-desc">📁 Explored job skills,<br> salary trends,<br> and visualized workforce shifts.</p>
+    <a href="https://github.com/met-ad-688/lab04-zimozeng12" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+  <div class="zimo-bubble bubble-a">
+    <h3>📊 Lab 05: Spark Deep Dive</h3>
+    <p class="btn-desc">🧮 More Spark,<br> more queries,<br> more visual magic.</p>
+    <a href="https://github.com/met-ad-688/lab05-zimozeng12" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+  <div class="zimo-bubble bubble-b">
+    <h3>📊 Lab 06: Final Analysis</h3>
+    <p class="btn-desc">✨ Final synthesis of skills,<br> salaries,<br> and job categories.</p>
+    <a href="https://github.com/met-ad-688/lab06-zimozeng12" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+  <div class="zimo-bubble bubble-d">
+    <h3>🚀 Team Project: Career Insight</h3>
+    <p class="btn-desc">🧭 Gender x geography x jobs.<br> Strategic career storytelling through data.</p>
+    <a href="https://github.com/ChialingSung/ad688-employability-sp25A1-group8.git" target="_blank">🔗 View GitHub Repo</a>
+  </div>
+
+</div>
+```
+
+```{=html}
+<p class="zimo-signature">@ POWERED BY ZIMO.SYSTEM</p>
+```
+
+```{=html}
+<!-- ✨ Cosmic Background Effects -->
+<div id="cyber-meteor-layer">
+  <div class="meteor" style="left: 10%; animation-duration: 5s; animation-delay: 0s;"></div>
+  <div class="meteor" style="left: 30%; animation-duration: 7s; animation-delay: 2s;"></div>
+  <div class="meteor" style="left: 50%; animation-duration: 6s; animation-delay: 4s;"></div>
+  <div class="meteor" style="left: 70%; animation-duration: 5s; animation-delay: 1s;"></div>
+  <div class="meteor" style="left: 90%; animation-duration: 8s; animation-delay: 3s;"></div>
+</div>
+<div id="star-field"></div>
+<div id="ripple-cursor"></div>
+```
+````{=html}
+<div id="twinkle-layer"></div>
+
+<script>
+  const twinkleLayer = document.getElementById('twinkle-layer');
+
+  function spawnTwinkleStars() {
+    const star = document.createElement('div');
+    star.className = 'twinkle-star';
+
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.animationDuration = `${1 + Math.random() * 2}s`;
+    twinkleLayer.appendChild(star);
+
+    setTimeout(() => star.remove(), 3000);
+  }
+
+  function spawnMultipleStars(count = 3) {
+    for (let i = 0; i < count; i++) {
+      spawnTwinkleStars();
+    }
+  }
+
+  setInterval(() => {
+    if (Math.random() < 0.9) spawnMultipleStars(2 + Math.floor(Math.random() * 3));
+  }, 400);
+</script>
+
+<a href="index.qmd" title="Back to Home">
+  <img src="home.png" alt="Back to Home" class="home-float">
+</a>

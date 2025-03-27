@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.min.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    console.log("✨ TypeIt loaded!");
+
+    new TypeIt("#typewriter-text", {
+      strings: [
+        "Business Analyst 🧠",
+        "Data Storyteller 📊",
+        "Cross-cultural Collaborator 🌍"
+      ],
+      speed: 80,
+      breakLines: false,
+      loop: true,
+      deleteSpeed: 40,
+      nextStringDelay: 1500,
+      waitUntilVisible: true
+    }).go();
+  });
+</script>
