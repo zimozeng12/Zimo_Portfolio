@@ -112,7 +112,6 @@
   text-decoration: underline;
 }
 
-/* 🎈不规则位置类：根据需要添加在每个 bubble 上 */
 .bubble-a { transform: rotate(-2deg) translateY(-10px); }
 .bubble-b { transform: rotate(3deg) translateY(5px); }
 .bubble-c { transform: rotate(-4deg) translateY(-20px); }

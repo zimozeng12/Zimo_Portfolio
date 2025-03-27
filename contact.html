@@ -156,15 +156,63 @@ ul.task-list li input[type="checkbox"] {
 
   <div class="zimo-contact-card">
     <h3 class="anchored">🦾 TRANSMIT A MESSAGE</h3>
-    <p>Send a signal to ZIMO.SYSTEM. Await reply protocol 🛸</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required="">
-      <input type="email" placeholder="Your Email" required="">
-      <textarea rows="5" placeholder="Message to ZIMO.SYSTEM" required=""></textarea>
-      <button type="submit">🚀 TRANSMIT</button>
-    </form>
-    <p class="terminal-hint">⇨ All messages are routed through the neon uplink 🛰</p>
-  </div>
+<p>Send a signal to ZIMO.SYSTEM. Await reply protocol 🛸</p>
+
+<form action="https://formspree.io/f/mgvalepa" method="POST" class="contact-form" id="zimo-form">
+  <input type="text" name="name" placeholder="Your Name" required="">
+  <input type="email" name="email" placeholder="Your Email" required="">
+  <textarea name="message" rows="5" placeholder="Message to ZIMO.SYSTEM" required=""></textarea>
+  <input type="hidden" name="_subject" value="New Contact from ZIMO.SYSTEM">
+  <button type="submit" id="submit-btn">🚀 TRANSMIT</button>
+  <div id="form-status" class="form-status-cyber"></div>
+</form>
+
+<p class="terminal-hint neon-center">⇨ All messages are routed through the neon uplink 🛰</p>
+
+<script>
+  const form = document.getElementById("zimo-form");
+  const submitBtn = document.getElementById("submit-btn");
+  const statusMsg = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.innerText = "⏳ TRANSMITTING...";
+    statusMsg.innerText = ">> Sending encrypted signal to ZIMO.SYSTEM";
+    statusMsg.className = "form-status-cyber sending";
+
+    const data = new FormData(form);
+    const action = form.action;
+
+    try {
+      const res = await fetch(action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        form.reset();
+        statusMsg.innerText = ":: MESSAGE SENT SUCCESSFULLY ✓";
+        statusMsg.className = "form-status-cyber success";
+      } else {
+        throw new Error("Formspree error");
+      }
+    } catch (err) {
+      statusMsg.innerText = ":: TRANSMISSION ERROR ❌";
+      statusMsg.className = "form-status-cyber error";
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.innerText = "🚀 TRANSMIT";
+
+    setTimeout(() => {
+      statusMsg.innerText = "";
+      statusMsg.className = "form-status-cyber";
+    }, 5000);
+  });
+</script>
+
 </div>
 
 
@@ -212,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -303,7 +351,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/zimozeng12\.github\.io\/Zimo_Portfolio\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

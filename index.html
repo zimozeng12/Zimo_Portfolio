@@ -4759,12 +4759,10 @@ color: var(--primary-neon);
 text-shadow: 0 0 10px var(--primary-neon);
 text-align: center;
 }
-
 .avatar {
-width: 200px; 
-height: 200px;
-border-radius: 50%; 
-object-fit: cover; 
+width: 200px; height: 200px;
+border-radius: 50%;
+object-fit: cover;
 border: 3px solid var(--primary-neon);
 box-shadow: 0 0 16px var(--primary-neon);
 transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -4957,7 +4955,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-pointer-events: none; 
+pointer-events: none;
 z-index: 0;
 overflow: hidden;
 }
@@ -5291,7 +5289,6 @@ font-size: 0.75rem;
 color: #66ccff;
 text-decoration: underline;
 }
-
 .bubble-a { transform: rotate(-2deg) translateY(-10px); }
 .bubble-b { transform: rotate(3deg) translateY(5px); }
 .bubble-c { transform: rotate(-4deg) translateY(-20px); }
@@ -5471,6 +5468,34 @@ font-family: 'VT323', monospace;
 background-color: var(--primary-neon);
 color: black;
 box-shadow: 0 0 20px var(--neon-hover);
+}
+.form-status-cyber {
+margin-top: 12px;
+font-family: 'Orbitron', monospace;
+text-align: center;
+font-size: 1rem;
+letter-spacing: 1px;
+text-shadow: 0 0 5px hotpink;
+transition: all 0.3s ease-in-out;
+}
+.form-status-cyber.success {
+color: #00ffcc;
+text-shadow: 0 0 6px #00ffcc;
+}
+.form-status-cyber.error {
+color: #ff4d6d;
+text-shadow: 0 0 6px #ff4d6d;
+}
+.form-status-cyber.sending {
+color: #ffd700;
+text-shadow: 0 0 6px #ffd700;
+}
+.neon-center {
+text-align: center;
+font-family: 'Orbitron', monospace;
+color: hotpink;
+text-shadow: 0 0 4px hotpink, 0 0 8px deeppink;
+margin-top: 10px;
 }
 </style>
 </head>
@@ -5709,7 +5734,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/zimozeng12\.github\.io\/Zimo_Portfolio\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

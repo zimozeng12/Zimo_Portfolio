@@ -55,12 +55,11 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* 头像基础样式 */
 .avatar {
-  width: 200px; /* 根据需要可调大或小，比如180px / 150px */
+  width: 200px; 
   height: 200px;
-  border-radius: 50%; /* 圆形裁剪 */
-  object-fit: cover; /* 保证图片不变形 */
+  border-radius: 50%;
+  object-fit: cover;
   border: 3px solid var(--primary-neon);
   box-shadow: 0 0 16px var(--primary-neon);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -279,19 +278,19 @@ footer {
 }
 
 
-/* === 流星背景容器 === */
+/* === stars === */
 #cyber-meteor-layer {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* 不影响点击交互 */
+  pointer-events: none;
   z-index: 0;
   overflow: hidden;
 }
 
-/* === 单个流星 === */
+/* === single stars === */
 .meteor {
   position: absolute;
   width: 2px;
@@ -302,7 +301,7 @@ footer {
   transform: rotate(45deg);
 }
 
-/* === 流星动画关键帧 === */
+/* === stars === */
 @keyframes meteor-fall {
   0% {
     transform: translateX(100vw) translateY(-20vh) rotate(45deg);
@@ -314,7 +313,7 @@ footer {
   }
 }
 
-/* === 星星闪烁 === */
+/* === stars === */
 .star-twinkle {
   position: absolute;
   width: 3px;
@@ -330,7 +329,7 @@ footer {
   50% { opacity: 1; transform: scale(1.5); }
 }
 
-/* === 鼠标涟漪效果 === */
+/* === Mouse ripple effect === */
 .ripple {
   position: absolute;
   width: 12px;
