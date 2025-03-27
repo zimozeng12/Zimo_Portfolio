@@ -80,3 +80,37 @@
     box-shadow: 0 0 20px var(--neon-hover);
   }
   
+
+  .form-status-cyber {
+    margin-top: 12px;
+    font-family: 'Orbitron', monospace;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px hotpink;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .form-status-cyber.success {
+    color: #00ffcc;
+    text-shadow: 0 0 6px #00ffcc;
+  }
+  
+  .form-status-cyber.error {
+    color: #ff4d6d;
+    text-shadow: 0 0 6px #ff4d6d;
+  }
+  
+  .form-status-cyber.sending {
+    color: #ffd700;
+    text-shadow: 0 0 6px #ffd700;
+  }
+
+  .neon-center {
+    text-align: center;
+    font-family: 'Orbitron', monospace;
+    color: hotpink;
+    text-shadow: 0 0 4px hotpink, 0 0 8px deeppink;
+    margin-top: 10px;
+  }
+  
